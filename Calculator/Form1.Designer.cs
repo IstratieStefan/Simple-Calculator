@@ -47,7 +47,7 @@
             this.buttonCE = new System.Windows.Forms.Button();
             this.buttonC = new System.Windows.Forms.Button();
             this.textBoxResult = new System.Windows.Forms.TextBox();
-            this.label = new System.Windows.Forms.Label();
+            this.labelCurrentOperation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -260,24 +260,23 @@
             this.textBoxResult.Text = "0";
             this.textBoxResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label
+            // labelCurrentOperation
             // 
-            this.label.AutoSize = true;
-            this.label.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.Location = new System.Drawing.Point(12, 8);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(70, 25);
-            this.label.TabIndex = 20;
-            this.label.Text = "label1";
-            this.label.Click += new System.EventHandler(this.label1_Click);
+            this.labelCurrentOperation.AutoSize = true;
+            this.labelCurrentOperation.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelCurrentOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCurrentOperation.Location = new System.Drawing.Point(12, 8);
+            this.labelCurrentOperation.Name = "labelCurrentOperation";
+            this.labelCurrentOperation.Size = new System.Drawing.Size(0, 25);
+            this.labelCurrentOperation.TabIndex = 20;
+            this.labelCurrentOperation.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(264, 283);
-            this.Controls.Add(this.label);
+            this.Controls.Add(this.labelCurrentOperation);
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.buttonCE);
@@ -328,7 +327,7 @@
         private System.Windows.Forms.Button buttonCE;
         private System.Windows.Forms.Button buttonC;
         private System.Windows.Forms.TextBox textBoxResult;
-        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label labelCurrentOperation;
     }
 }
 

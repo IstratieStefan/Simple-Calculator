@@ -14,6 +14,7 @@ namespace Calculator
     {
         Double resultValue = 0;
         String operationPerformed = "";
+        bool isOperationPerformed = false;
 
         public Form1()
         {
@@ -39,11 +40,12 @@ namespace Calculator
 
         private void button_click(object sender, EventArgs e)
         {
-            if (textBoxResult.Text == "0")
+            if ((textBoxResult.Text == "0") || isOperationPerformed)
                 textBoxResult.Clear();
 
             Button button = (Button)sender;
             textBoxResult.Text = textBoxResult.Text + button.Text;
+            isOperationPerformed = false;
         }
 
         private void button_click_operator(object sender, EventArgs e)
@@ -51,13 +53,15 @@ namespace Calculator
             Button button = (Button)sender;
             operationPerformed = button.Text;
             resultValue = Double.Parse(textBoxResult.Text);
-
+            labelCurrentOperation.Text = resultValue + " " + operationPerformed;
+            isOperationPerformed = true;
         }
 
         private void button_click_clear(object sender, EventArgs e)
         {
             textBoxResult.Text = "0";
             resultValue = 0;
+            labelCurrentOperation.Text = "";
         }
 
         private void button_click_clear_entry(object sender, EventArgs e)
@@ -84,6 +88,7 @@ namespace Calculator
                 default:
                     break;
             }
+            labelCurrentOperation.Text = textBoxResult.Text;
         }
     }
 }
